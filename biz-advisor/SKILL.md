@@ -180,3 +180,18 @@ version: 0.9.0
 ```
 
 参谋不写纪要、不动档案；biz-sync 不做判断。
+
+## 版本管理（改完必做）
+
+本技能有独立的 GitHub 仓库做版本管理：`git@github.com:LibertyinDeath/businessteacher.git`
+
+**每次改完 SKILL.md 或 references，必须同步一次：**
+
+```bash
+cp ~/.workbuddy/skills/biz-advisor/SKILL.md /Users/alex/WorkBuddy/businessteacher/biz-advisor/
+cp ~/.workbuddy/skills/biz-advisor/references/*.md /Users/alex/WorkBuddy/businessteacher/biz-advisor/references/
+cd /Users/alex/WorkBuddy/businessteacher && git -c core.quotepath=false add -A && git -c core.quotepath=false commit -m "biz-advisor v<版本>：<改了什么>" && git push
+```
+
+- 改动**不升号**，发布/定版时才升（宝总的版本号规则）；
+- 仓库里的 README 有完整版本历史，升号时同步更新那一行。
